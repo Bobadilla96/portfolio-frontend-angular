@@ -1,6 +1,6 @@
-# Portfolio Angular - Enrique Bobadilla
+# Portfolio Frontend - Enrique Bobadilla
 
-Portfolio frontend en Angular que consolida proyectos reales publicados, trayectoria profesional y evidencia de codigo en repositorios.
+Portfolio frontend en Angular que consolida proyectos reales publicados (Angular + Next.js), trayectoria profesional y evidencia de codigo en repositorios.
 
 ## Que incluye
 
@@ -19,6 +19,7 @@ Portfolio frontend en Angular que consolida proyectos reales publicados, trayect
 3. Tickets de Soporte
 4. Inventario Control
 5. Admin Usuarios RBAC
+6. Cursos Online LMS (Next.js)
 
 ## Fuentes de informacion usadas
 

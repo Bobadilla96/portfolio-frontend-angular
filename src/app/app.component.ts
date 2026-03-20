@@ -51,7 +51,7 @@ interface ProjectShowcase {
 export class AppComponent {
   readonly profile: ProfileInfo = {
     name: 'Enrique Junior Bobadilla Ruiz Diaz',
-    role: 'Frontend Developer Angular',
+    role: 'Frontend Developer (Angular + Next.js)',
     location: 'Ciudad del Este, Paraguay',
     email: 'enribobadill96@gmail.com',
     phone: '+595 994 321 813',
@@ -64,7 +64,7 @@ export class AppComponent {
   readonly skillGroups: SkillGroup[] = [
     {
       title: 'Frontend Core',
-      items: ['Angular 17/19/20', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'SCSS', 'Tailwind CSS']
+      items: ['Angular 17/19/20', 'Next.js 16', 'React 19', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'SCSS', 'Tailwind CSS']
     },
     {
       title: 'Arquitectura y Calidad',
@@ -262,6 +262,35 @@ export class AppComponent {
         {
           label: 'User Permissions Component',
           url: 'https://github.com/Bobadilla96/admin-usuarios-rbac/blob/main/src/app/features/users/user-permissions/user-permissions.component.ts'
+        }
+      ]
+    },
+    {
+      id: 'cursos-online-lms',
+      title: 'Cursos Online LMS',
+      subtitle: 'Plataforma e-learning con IA local',
+      description:
+        'Aplicacion Next.js con catalogo de cursos reales, rutas dinamicas SSG, dashboards por rol y tutor IA local para apoyar aprendizaje.',
+      tech: ['Next.js App Router', 'React 19', 'TypeScript', 'Tailwind CSS', 'GitHub Pages'],
+      demoUrl: 'https://bobadilla96.github.io/cursos-online-lms/',
+      repoUrl: 'https://github.com/Bobadilla96/cursos-online-lms',
+      highlights: [
+        'Catalogo y detalle de cursos con filtros y paginas estaticas.',
+        'Perfiles student, mentor y super admin con vistas separadas.',
+        'Recomendaciones y chatbot tutor IA local sin servicios pagos.'
+      ],
+      evidence: [
+        {
+          label: 'Learning Route SSG',
+          url: 'https://github.com/Bobadilla96/cursos-online-lms/blob/main/src/app/courses/%5Bslug%5D/learn/%5BlessonId%5D/page.tsx'
+        },
+        {
+          label: 'Recommendation Engine',
+          url: 'https://github.com/Bobadilla96/cursos-online-lms/blob/main/src/lib/recommendations.ts'
+        },
+        {
+          label: 'AI Tutor Chat Component',
+          url: 'https://github.com/Bobadilla96/cursos-online-lms/blob/main/src/components/ai-tutor-chat.tsx'
         }
       ]
     }
