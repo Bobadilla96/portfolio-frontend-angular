@@ -1,0 +1,128 @@
+<div class="portfolio-shell">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">EB</span>
+      <div>
+        <p class="kicker">Angular Frontend Portfolio</p>
+        <strong>{{ profile.name }}</strong>
+      </div>
+    </div>
+
+    <div class="top-links">
+      <a [href]="profile.linkedin" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a [href]="profile.github" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="#proyectos">Ver proyectos</a>
+    </div>
+  </header>
+
+  <section class="hero card">
+    <p class="kicker">Perfil profesional</p>
+    <h1>{{ profile.role }}</h1>
+    <p class="hero-summary">{{ profile.summary }}</p>
+
+    <div class="hero-meta">
+      <span>{{ profile.location }}</span>
+      <a [href]="'mailto:' + profile.email">{{ profile.email }}</a>
+      <span>{{ profile.phone }}</span>
+    </div>
+  </section>
+
+  <section class="stats-grid">
+    <article class="stat card">
+      <span class="label">Proyectos Angular publicados</span>
+      <strong>{{ projects.length }}</strong>
+    </article>
+    <article class="stat card">
+      <span class="label">Demos en produccion</span>
+      <strong>{{ projects.length }}</strong>
+    </article>
+    <article class="stat card">
+      <span class="label">Evidencias de codigo</span>
+      <strong>{{ totalEvidence }}</strong>
+    </article>
+  </section>
+
+  <section class="section-block card">
+    <p class="kicker">Stack frontend</p>
+    <h2>Capacidades tecnicas</h2>
+
+    <div class="skill-groups">
+      <article class="skill-group" *ngFor="let group of skillGroups">
+        <h3>{{ group.title }}</h3>
+        <div class="chips">
+          <span class="chip" *ngFor="let item of group.items; trackBy: trackByText">{{ item }}</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-block card">
+    <p class="kicker">Carrera de vida</p>
+    <h2>Trayectoria profesional</h2>
+
+    <div class="timeline">
+      <article class="timeline-item" *ngFor="let item of career">
+        <span class="period">{{ item.period }}</span>
+        <h3>{{ item.role }}</h3>
+        <p class="company">{{ item.company }}</p>
+        <ul>
+          <li *ngFor="let highlight of item.highlights; trackBy: trackByText">{{ highlight }}</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-block" id="proyectos">
+    <div class="section-header">
+      <p class="kicker">Portafolio Angular</p>
+      <h2>Proyectos web publicados</h2>
+      <p>Cada tarjeta incluye demo online, repositorio y evidencias de codigo fuente.</p>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card" *ngFor="let project of projects; trackBy: trackByProject">
+        <div class="project-head">
+          <h3>{{ project.title }}</h3>
+          <span>{{ project.subtitle }}</span>
+        </div>
+
+        <p class="description">{{ project.description }}</p>
+
+        <div class="tech-list">
+          <span *ngFor="let tech of project.tech; trackBy: trackByText">{{ tech }}</span>
+        </div>
+
+        <ul class="highlight-list">
+          <li *ngFor="let highlight of project.highlights; trackBy: trackByText">{{ highlight }}</li>
+        </ul>
+
+        <div class="project-actions">
+          <a [href]="project.demoUrl" target="_blank" rel="noreferrer">Demo online</a>
+          <a [href]="project.repoUrl" target="_blank" rel="noreferrer">Repositorio</a>
+        </div>
+
+        <div class="evidence-block">
+          <p>Evidencia de codigo</p>
+          <a
+            *ngFor="let evidence of project.evidence; trackBy: trackByEvidence"
+            [href]="evidence.url"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {{ evidence.label }}
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="footer card">
+    <p class="kicker">Contacto</p>
+    <h3>{{ profile.name }}</h3>
+    <div class="footer-links">
+      <a [href]="'mailto:' + profile.email">{{ profile.email }}</a>
+      <a [href]="profile.linkedin" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a [href]="profile.github" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </footer>
+</div>

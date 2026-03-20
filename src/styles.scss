@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  color-scheme: light;
+  --pf-bg-1: #f1fff9;
+  --pf-bg-2: #ecf5ff;
+  --pf-surface: rgba(255, 255, 255, 0.84);
+  --pf-surface-alt: #f5fffb;
+  --pf-border: #c8e6da;
+  --pf-text: #163439;
+  --pf-muted: #4d7075;
+  --pf-primary: #0f766e;
+  --pf-primary-strong: #0b5c56;
+  --pf-accent: #2563eb;
+  --pf-shadow: 0 20px 36px -26px rgba(9, 40, 55, 0.38);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  color: var(--pf-text);
+  background:
+    radial-gradient(circle at 10% 16%, color-mix(in srgb, var(--pf-primary) 17%, transparent), transparent 34%),
+    radial-gradient(circle at 88% 12%, color-mix(in srgb, var(--pf-accent) 16%, transparent), transparent 30%),
+    linear-gradient(180deg, var(--pf-bg-1) 0%, var(--pf-bg-2) 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
