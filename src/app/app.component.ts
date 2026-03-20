@@ -293,6 +293,35 @@ export class AppComponent {
           url: 'https://github.com/Bobadilla96/cursos-online-lms/blob/main/src/components/ai-tutor-chat.tsx'
         }
       ]
+    },
+    {
+      id: 'marketplace-nextjs',
+      title: 'Marketplace Next.js',
+      subtitle: 'Compra/venta con carrito y dashboard',
+      description:
+        'Marketplace con Next.js App Router: catalogo, detalle de producto, favoritos persistentes, carrito con checkout demo, mensajeria y panel de vendedor.',
+      tech: ['Next.js App Router', 'React 19', 'TypeScript', 'Tailwind CSS', 'GitHub Pages'],
+      demoUrl: 'https://bobadilla96.github.io/07-marketplace/',
+      repoUrl: 'https://github.com/Bobadilla96/07-marketplace',
+      highlights: [
+        'Carrito con gestion de cantidades, resumen y flujo de pago demo.',
+        'Dashboard de vendedor con listados, mensajes y estadisticas.',
+        'Deploy estatico en Pages con workflow de GitHub Actions.'
+      ],
+      evidence: [
+        {
+          label: 'Cart Checkout Page',
+          url: 'https://github.com/Bobadilla96/07-marketplace/blob/main/src/app/cart/page.client.tsx'
+        },
+        {
+          label: 'Marketplace Navbar',
+          url: 'https://github.com/Bobadilla96/07-marketplace/blob/main/src/components/layout/navbar.tsx'
+        },
+        {
+          label: 'Cart Storage Service',
+          url: 'https://github.com/Bobadilla96/07-marketplace/blob/main/src/lib/cart.ts'
+        }
+      ]
     }
   ];
 

@@ -20,6 +20,7 @@ Portfolio frontend en Angular que consolida proyectos reales publicados (Angular
 4. Inventario Control
 5. Admin Usuarios RBAC
 6. Cursos Online LMS (Next.js)
+7. Marketplace Next.js
 
 ## Fuentes de informacion usadas
 
