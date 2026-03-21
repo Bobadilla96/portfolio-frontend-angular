@@ -51,7 +51,7 @@ interface ProjectShowcase {
 export class AppComponent {
   readonly profile: ProfileInfo = {
     name: 'Enrique Junior Bobadilla Ruiz Diaz',
-    role: 'Frontend Developer (Angular + Next.js)',
+    role: 'Frontend Developer (Angular + Next.js + React)',
     location: 'Ciudad del Este, Paraguay',
     email: 'enribobadill96@gmail.com',
     phone: '+595 994 321 813',
@@ -320,6 +320,93 @@ export class AppComponent {
         {
           label: 'Cart Storage Service',
           url: 'https://github.com/Bobadilla96/07-marketplace/blob/main/src/lib/cart.ts'
+        }
+      ]
+    },
+    {
+      id: 'dashboard-financiero',
+      title: 'Dashboard Financiero',
+      subtitle: 'KPIs, presupuestos y reportes',
+      description:
+        'Aplicacion Next.js para control financiero personal/pyme con dashboard de indicadores, gestion de transacciones, metas y reportes exportables.',
+      tech: ['Next.js App Router', 'React 19', 'TypeScript', 'Tailwind CSS', 'Recharts'],
+      demoUrl: 'https://bobadilla96.github.io/dashboard-financiero/',
+      repoUrl: 'https://github.com/Bobadilla96/dashboard-financiero',
+      highlights: [
+        'Panel financiero con KPIs y graficos por categoria.',
+        'Flujos de presupuesto, metas y seguimiento mensual.',
+        'Reportes con filtros por fecha y exportacion CSV.'
+      ],
+      evidence: [
+        {
+          label: 'Reports Dashboard Page',
+          url: 'https://github.com/Bobadilla96/dashboard-financiero/blob/master/src/app/dashboard/reports/page.tsx'
+        },
+        {
+          label: 'Finance Store',
+          url: 'https://github.com/Bobadilla96/dashboard-financiero/blob/master/src/store/finance.store.ts'
+        },
+        {
+          label: 'Transactions Table',
+          url: 'https://github.com/Bobadilla96/dashboard-financiero/blob/master/src/components/transaction-table.tsx'
+        }
+      ]
+    },
+    {
+      id: 'turnos-reservas',
+      title: 'Turnos y Reservas',
+      subtitle: 'Agenda medica con flujo de reserva',
+      description:
+        'Plataforma de reservas con seleccion por servicio, profesional y horario, confirmacion de turnos y panel administrativo con calendario.',
+      tech: ['Next.js App Router', 'React 19', 'TypeScript', 'Tailwind CSS', 'Store client-side'],
+      demoUrl: 'https://bobadilla96.github.io/turnos-reservas/',
+      repoUrl: 'https://github.com/Bobadilla96/turnos-reservas',
+      highlights: [
+        'Wizard de reserva en pasos con disponibilidad en tiempo real.',
+        'Panel de gestion con vistas de agenda y profesionales.',
+        'Flujo de autenticacion por roles y rutas protegidas.'
+      ],
+      evidence: [
+        {
+          label: 'Booking Confirmation Page',
+          url: 'https://github.com/Bobadilla96/turnos-reservas/blob/main/src/app/booking/confirmation/page.tsx'
+        },
+        {
+          label: 'Booking Store',
+          url: 'https://github.com/Bobadilla96/turnos-reservas/blob/main/src/store/booking.store.ts'
+        },
+        {
+          label: 'Appointment Calendar Component',
+          url: 'https://github.com/Bobadilla96/turnos-reservas/blob/main/src/components/calendar/appointment-calendar.tsx'
+        }
+      ]
+    },
+    {
+      id: 'kanban-board-colaborativo',
+      title: 'Kanban Board Colaborativo',
+      subtitle: 'Gestion visual de tareas en React',
+      description:
+        'Tablero Kanban estilo Trello con multiples tableros, creacion/edicion de tarjetas, filtros, persistencia local y enfoque en UX profesional.',
+      tech: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS', 'Vitest'],
+      demoUrl: 'https://bobadilla96.github.io/kanban-board-colaborativo/',
+      repoUrl: 'https://github.com/Bobadilla96/kanban-board-colaborativo',
+      highlights: [
+        'CRUD completo de tableros, columnas y tarjetas.',
+        'Persistencia robusta con validaciones y recuperación de estado.',
+        'Componentes reutilizables para dialogos y layout de tablero.'
+      ],
+      evidence: [
+        {
+          label: 'Board Store',
+          url: 'https://github.com/Bobadilla96/kanban-board-colaborativo/blob/main/src/store/board.store.ts'
+        },
+        {
+          label: 'Board Selector',
+          url: 'https://github.com/Bobadilla96/kanban-board-colaborativo/blob/main/src/components/layout/BoardSelector.tsx'
+        },
+        {
+          label: 'Card Dialog UI',
+          url: 'https://github.com/Bobadilla96/kanban-board-colaborativo/blob/main/src/components/ui/dialog.tsx'
         }
       ]
     }
