@@ -14,10 +14,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should contain seven published projects', () => {
+  it('should contain at least ten published projects', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.projects.length).toBe(7);
+    expect(app.projects.length).toBeGreaterThanOrEqual(10);
   });
 
   it('should include the Next.js LMS project', () => {
@@ -34,5 +34,14 @@ describe('AppComponent', () => {
     const nextProject = app.projects.find((project) => project.id === 'marketplace-nextjs');
     expect(nextProject).toBeTruthy();
     expect(nextProject?.demoUrl).toContain('07-marketplace');
+  });
+
+  it('should include the Professional Language Coach project', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const nextProject = app.projects.find((project) => project.id === 'professional-language-coach');
+    expect(nextProject).toBeTruthy();
+    expect(nextProject?.repoUrl).toContain('professional-language-coach');
+    expect(nextProject?.demoUrl).toBeUndefined();
   });
 });

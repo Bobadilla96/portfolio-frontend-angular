@@ -320,6 +320,16 @@
   border-color: color-mix(in srgb, var(--pf-primary) 50%, var(--pf-border));
 }
 
+.project-status {
+  border: 1px dashed color-mix(in srgb, var(--pf-primary) 35%, var(--pf-border));
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--pf-surface-alt) 88%, transparent);
+  color: var(--pf-muted);
+  padding: 0.3rem 0.56rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
 .evidence-block {
   border-top: 1px dashed var(--pf-border);
   padding-top: 0.45rem;

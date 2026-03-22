@@ -34,7 +34,7 @@
     </article>
     <article class="stat card">
       <span class="label">Demos en produccion</span>
-      <strong>{{ projects.length }}</strong>
+      <strong>{{ totalPublishedDemos }}</strong>
     </article>
     <article class="stat card">
       <span class="label">Evidencias de codigo</span>
@@ -97,7 +97,12 @@
         </ul>
 
         <div class="project-actions">
-          <a [href]="project.demoUrl" target="_blank" rel="noreferrer">Demo online</a>
+          <a *ngIf="project.demoUrl; else demoUnavailable" [href]="project.demoUrl" target="_blank" rel="noreferrer">
+            {{ project.demoLabel || 'Demo online' }}
+          </a>
+          <ng-template #demoUnavailable>
+            <span class="project-status">{{ project.demoStatus || 'Demo no disponible' }}</span>
+          </ng-template>
           <a [href]="project.repoUrl" target="_blank" rel="noreferrer">Repositorio</a>
         </div>
 

@@ -35,7 +35,9 @@ interface ProjectShowcase {
   subtitle: string;
   description: string;
   tech: string[];
-  demoUrl: string;
+  demoUrl?: string;
+  demoLabel?: string;
+  demoStatus?: string;
   repoUrl: string;
   highlights: string[];
   evidence: CodeEvidence[];
@@ -120,6 +122,35 @@ export class AppComponent {
   ];
 
   readonly projects: ProjectShowcase[] = [
+    {
+      id: 'professional-language-coach',
+      title: 'Professional Language Coach',
+      subtitle: 'Idiomas profesionales + Supabase + BBC local',
+      description:
+        'Aplicacion Next.js enfocada en ingles profesional: rutas de aprendizaje, progreso sincronizado con Supabase, practica guiada, writing lab, conversacion con VibeVoice y biblioteca BBC local para uso privado.',
+      tech: ['Next.js App Router', 'React 19', 'TypeScript', 'Tailwind CSS', 'Supabase', 'VibeVoice', 'OpenRouter'],
+      demoStatus: 'Demo requiere entorno local / hosting con servidor',
+      repoUrl: 'https://github.com/Bobadilla96/professional-language-coach',
+      highlights: [
+        'Autenticacion real con Supabase y sincronizacion de progreso por usuario.',
+        'Modulos de speaking, writing y practice con apoyo en espanol.',
+        'Biblioteca BBC con PDF/audio locales sin publicar materiales privados.'
+      ],
+      evidence: [
+        {
+          label: 'Supabase Progress Sync',
+          url: 'https://github.com/Bobadilla96/professional-language-coach/blob/main/src/components/common/progress-sync.tsx'
+        },
+        {
+          label: 'BBC Archive Service',
+          url: 'https://github.com/Bobadilla96/professional-language-coach/blob/main/src/lib/bbc-archive.server.ts'
+        },
+        {
+          label: 'Conversation Coach API',
+          url: 'https://github.com/Bobadilla96/professional-language-coach/blob/main/src/app/api/ai/conversation-coach/route.ts'
+        }
+      ]
+    },
     {
       id: 'gestion-de-pedidos',
       title: 'Gestion de Pedidos',
@@ -409,11 +440,73 @@ export class AppComponent {
           url: 'https://github.com/Bobadilla96/kanban-board-colaborativo/blob/main/src/components/ui/dialog.tsx'
         }
       ]
+    },
+    {
+      id: 'delivery-app-react',
+      title: 'Delivery App React',
+      subtitle: 'Pedidos de comida con checkout y tracking',
+      description:
+        'Aplicacion tipo PedidosYa con catalogo de restaurantes, carrito persistente, checkout validado y timeline de seguimiento en tiempo real.',
+      tech: ['React 19', 'TypeScript', 'Vite', 'Zustand Persist', 'Tailwind CSS', 'Vitest'],
+      demoUrl: 'https://bobadilla96.github.io/delivery-app-react/',
+      repoUrl: 'https://github.com/Bobadilla96/delivery-app-react',
+      highlights: [
+        'Carrito persistente con regla de un solo restaurante por pedido.',
+        'Flujo completo: menu, carrito, checkout, tracking e historial.',
+        'Deploy en GitHub Pages con fallback SPA y pipeline automatizado.'
+      ],
+      evidence: [
+        {
+          label: 'Cart Store',
+          url: 'https://github.com/Bobadilla96/delivery-app-react/blob/main/src/store/cart.store.ts'
+        },
+        {
+          label: 'Checkout Page',
+          url: 'https://github.com/Bobadilla96/delivery-app-react/blob/main/src/pages/CheckoutPage.tsx'
+        },
+        {
+          label: 'Order Tracking Page',
+          url: 'https://github.com/Bobadilla96/delivery-app-react/blob/main/src/pages/OrderTrackingPage.tsx'
+        }
+      ]
+    },
+    {
+      id: 'dashboard-analytics-react',
+      title: 'Dashboard Analytics React',
+      subtitle: 'KPIs ejecutivos con export y filtros avanzados',
+      description:
+        'Dashboard analitico con React + TypeScript para seguimiento de ingresos, usuarios y conversion, incluyendo comparacion de periodos, exportes CSV/PDF y panel de insights.',
+      tech: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS v4', 'Recharts', 'Zustand', 'Vitest'],
+      demoUrl: 'https://bobadilla96.github.io/12-dashboard-analytics/',
+      repoUrl: 'https://github.com/Bobadilla96/12-dashboard-analytics',
+      highlights: [
+        'Filtro por rango de fechas con presets y comparacion contra periodo anterior.',
+        'Panel de KPIs, embudo de conversion, top paginas y objetivos de negocio.',
+        'Exportes operativos en CSV/PDF y soporte dark/light con persistencia local.'
+      ],
+      evidence: [
+        {
+          label: 'Dashboard Page',
+          url: 'https://github.com/Bobadilla96/12-dashboard-analytics/blob/main/src/pages/DashboardPage.tsx'
+        },
+        {
+          label: 'Dashboard Store',
+          url: 'https://github.com/Bobadilla96/12-dashboard-analytics/blob/main/src/store/dashboard.store.ts'
+        },
+        {
+          label: 'Export Buttons',
+          url: 'https://github.com/Bobadilla96/12-dashboard-analytics/blob/main/src/components/export/ExportButtons.tsx'
+        }
+      ]
     }
   ];
 
   get totalEvidence(): number {
     return this.projects.reduce((total, project) => total + project.evidence.length, 0);
+  }
+
+  get totalPublishedDemos(): number {
+    return this.projects.filter((project) => Boolean(project.demoUrl)).length;
   }
 
   trackByProject(_index: number, project: ProjectShowcase): string {
