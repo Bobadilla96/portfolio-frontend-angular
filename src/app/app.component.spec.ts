@@ -42,6 +42,18 @@ describe('AppComponent', () => {
     const nextProject = app.projects.find((project) => project.id === 'professional-language-coach');
     expect(nextProject).toBeTruthy();
     expect(nextProject?.repoUrl).toContain('professional-language-coach');
-    expect(nextProject?.demoUrl).toBeUndefined();
+    expect(nextProject?.demoUrl).toContain('professional-language-coach.vercel.app');
+  });
+
+  it('should expose featured projects for the hero showcase', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.featuredProjects.length).toBeGreaterThanOrEqual(4);
+  });
+
+  it('should build screenshot urls for all projects', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.projects.every((project) => project.screenshotUrl.includes('image.thum.io'))).toBeTrue();
   });
 });

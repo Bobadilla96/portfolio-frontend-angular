@@ -11,20 +11,65 @@
     <div class="top-links">
       <a [href]="profile.linkedin" target="_blank" rel="noreferrer">LinkedIn</a>
       <a [href]="profile.github" target="_blank" rel="noreferrer">GitHub</a>
-      <a href="#proyectos">Ver proyectos</a>
+      <a [href]="'mailto:' + profile.email">Contactar</a>
     </div>
   </header>
 
-  <section class="hero card">
-    <p class="kicker">Perfil profesional</p>
-    <h1>{{ profile.role }}</h1>
-    <p class="hero-summary">{{ profile.summary }}</p>
+  <section class="hero-grid">
+    <article class="hero card">
+      <p class="kicker">Portfolio Frontend</p>
+      <h1>{{ profile.role }}</h1>
+      <p class="hero-summary">{{ profile.summary }}</p>
 
-    <div class="hero-meta">
-      <span>{{ profile.location }}</span>
-      <a [href]="'mailto:' + profile.email">{{ profile.email }}</a>
-      <span>{{ profile.phone }}</span>
-    </div>
+      <div class="hero-actions">
+        <a href="#destacados">Ver proyectos destacados</a>
+        <a [href]="profile.github" target="_blank" rel="noreferrer" class="ghost">Explorar GitHub</a>
+      </div>
+
+      <div class="hero-meta">
+        <span>{{ profile.location }}</span>
+        <a [href]="'mailto:' + profile.email">{{ profile.email }}</a>
+        <span>{{ profile.phone }}</span>
+      </div>
+
+      <div class="pillar-grid">
+        <article class="pillar-card" *ngFor="let pillar of valuePillars; trackBy: trackByPillar">
+          <h3>{{ pillar.title }}</h3>
+          <p>{{ pillar.description }}</p>
+        </article>
+      </div>
+    </article>
+
+    <aside class="hero-proof card">
+      <p class="kicker">Resumen ejecutivo</p>
+      <h2>Frontend orientado a producto y operación</h2>
+      <p class="hero-proof-copy">
+        Portafolio con demos públicas, repositorios visibles y evidencias de código que muestran cómo resuelvo dashboards,
+        paneles administrativos, reservas, e-commerce y plataformas educativas.
+      </p>
+
+      <div class="proof-stats">
+        <article>
+          <span>Angular</span>
+          <strong>{{ angularProjectCount }}</strong>
+        </article>
+        <article>
+          <span>Next.js</span>
+          <strong>{{ nextProjectCount }}</strong>
+        </article>
+        <article>
+          <span>React</span>
+          <strong>{{ reactProjectCount }}</strong>
+        </article>
+      </div>
+
+      <div class="proof-list">
+        <span>UI de negocio</span>
+        <span>Integración con APIs</span>
+        <span>Deploy y CI</span>
+        <span>Evidencia técnica enlazada</span>
+      </div>
+    </aside>
   </section>
 
   <section class="stats-grid">
@@ -33,81 +78,149 @@
       <strong>{{ projects.length }}</strong>
     </article>
     <article class="stat card">
-      <span class="label">Demos en produccion</span>
+      <span class="label">Demos en producción</span>
       <strong>{{ totalPublishedDemos }}</strong>
     </article>
     <article class="stat card">
-      <span class="label">Evidencias de codigo</span>
+      <span class="label">Evidencias de código</span>
       <strong>{{ totalEvidence }}</strong>
     </article>
   </section>
 
-  <section class="section-block card">
-    <p class="kicker">Stack frontend</p>
-    <h2>Capacidades tecnicas</h2>
+  <section class="content-grid">
+    <article class="section-block card">
+      <p class="kicker">Stack técnico</p>
+      <h2>Capacidades frontend</h2>
 
-    <div class="skill-groups">
-      <article class="skill-group" *ngFor="let group of skillGroups">
-        <h3>{{ group.title }}</h3>
-        <div class="chips">
-          <span class="chip" *ngFor="let item of group.items; trackBy: trackByText">{{ item }}</span>
+      <div class="skill-groups">
+        <article class="skill-group" *ngFor="let group of skillGroups">
+          <h3>{{ group.title }}</h3>
+          <div class="chips">
+            <span class="chip" *ngFor="let item of group.items; trackBy: trackByText">{{ item }}</span>
+          </div>
+        </article>
+      </div>
+    </article>
+
+    <article class="section-block card">
+      <p class="kicker">Trayectoria</p>
+      <h2>Experiencia y formación</h2>
+
+      <div class="timeline compact">
+        <article class="timeline-item" *ngFor="let item of career">
+          <span class="period">{{ item.period }}</span>
+          <h3>{{ item.role }}</h3>
+          <p class="company">{{ item.company }}</p>
+          <ul>
+            <li *ngFor="let highlight of item.highlights; trackBy: trackByText">{{ highlight }}</li>
+          </ul>
+        </article>
+      </div>
+    </article>
+  </section>
+
+  <section class="section-block featured-section" id="destacados">
+    <div class="section-header">
+      <p class="kicker">Selección principal</p>
+      <h2>Proyectos destacados</h2>
+      <p>
+        Los proyectos con mayor peso técnico y mejor capacidad para mostrar criterio de arquitectura, UI de producto e integración real.
+      </p>
+    </div>
+
+    <div class="featured-grid">
+      <article class="featured-card card" *ngFor="let project of featuredProjects; trackBy: trackByProject">
+        <div class="featured-media">
+          <img [src]="project.screenshotUrl" [alt]="project.title + ' screenshot'" loading="lazy" referrerpolicy="no-referrer" />
+        </div>
+
+        <div class="featured-body">
+          <div class="project-head">
+            <div>
+              <p class="project-framework">{{ project.framework }}</p>
+              <h3>{{ project.title }}</h3>
+              <span>{{ project.subtitle }}</span>
+            </div>
+          </div>
+
+          <p class="description">{{ project.description }}</p>
+          <p class="impact">{{ project.impact }}</p>
+
+          <div class="tech-list">
+            <span *ngFor="let tech of project.tech; trackBy: trackByText">{{ tech }}</span>
+          </div>
+
+          <ul class="highlight-list">
+            <li *ngFor="let highlight of project.highlights; trackBy: trackByText">{{ highlight }}</li>
+          </ul>
+
+          <div class="project-actions">
+            <a [href]="project.demoUrl" target="_blank" rel="noreferrer">{{ project.demoLabel || 'Demo online' }}</a>
+            <a [href]="project.repoUrl" target="_blank" rel="noreferrer" class="ghost">Repositorio</a>
+          </div>
+
+          <div class="evidence-block">
+            <p>Evidencia de código</p>
+            <a
+              *ngFor="let evidence of project.evidence; trackBy: trackByEvidence"
+              [href]="evidence.url"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {{ evidence.label }}
+            </a>
+          </div>
         </div>
       </article>
     </div>
   </section>
 
-  <section class="section-block card">
-    <p class="kicker">Carrera de vida</p>
-    <h2>Trayectoria profesional</h2>
-
-    <div class="timeline">
-      <article class="timeline-item" *ngFor="let item of career">
-        <span class="period">{{ item.period }}</span>
-        <h3>{{ item.role }}</h3>
-        <p class="company">{{ item.company }}</p>
-        <ul>
-          <li *ngFor="let highlight of item.highlights; trackBy: trackByText">{{ highlight }}</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <section class="section-block" id="proyectos">
+  <section class="section-block library-section" id="proyectos">
     <div class="section-header">
-      <p class="kicker">Portafolio Frontend</p>
-      <h2>Proyectos web publicados</h2>
-      <p>Cada tarjeta incluye demo online, repositorio y evidencias de codigo fuente en Angular, Next.js y React.</p>
+      <p class="kicker">Biblioteca de proyectos</p>
+      <h2>Más proyectos publicados</h2>
+      <p>Filtrá por framework para revisar demos, repositorios y evidencia técnica según el stack que te interese.</p>
+    </div>
+
+    <div class="framework-filters card">
+      <button
+        type="button"
+        *ngFor="let filter of frameworkFilters; trackBy: trackByText"
+        [class.active]="isActiveFramework(filter)"
+        (click)="setFramework(filter)"
+      >
+        {{ filter }}
+      </button>
     </div>
 
     <div class="projects-grid">
-      <article class="project-card" *ngFor="let project of projects; trackBy: trackByProject">
+      <article class="project-card" *ngFor="let project of libraryProjects; trackBy: trackByProject">
+        <div class="project-media">
+          <img [src]="project.screenshotUrl" [alt]="project.title + ' screenshot'" loading="lazy" referrerpolicy="no-referrer" />
+        </div>
+
         <div class="project-head">
-          <h3>{{ project.title }}</h3>
+          <div>
+            <p class="project-framework">{{ project.framework }}</p>
+            <h3>{{ project.title }}</h3>
+          </div>
           <span>{{ project.subtitle }}</span>
         </div>
 
         <p class="description">{{ project.description }}</p>
+        <p class="impact compact-impact">{{ project.impact }}</p>
 
         <div class="tech-list">
           <span *ngFor="let tech of project.tech; trackBy: trackByText">{{ tech }}</span>
         </div>
 
-        <ul class="highlight-list">
-          <li *ngFor="let highlight of project.highlights; trackBy: trackByText">{{ highlight }}</li>
-        </ul>
-
         <div class="project-actions">
-          <a *ngIf="project.demoUrl; else demoUnavailable" [href]="project.demoUrl" target="_blank" rel="noreferrer">
-            {{ project.demoLabel || 'Demo online' }}
-          </a>
-          <ng-template #demoUnavailable>
-            <span class="project-status">{{ project.demoStatus || 'Demo no disponible' }}</span>
-          </ng-template>
-          <a [href]="project.repoUrl" target="_blank" rel="noreferrer">Repositorio</a>
+          <a [href]="project.demoUrl" target="_blank" rel="noreferrer">{{ project.demoLabel || 'Demo online' }}</a>
+          <a [href]="project.repoUrl" target="_blank" rel="noreferrer" class="ghost">Repositorio</a>
         </div>
 
         <div class="evidence-block">
-          <p>Evidencia de codigo</p>
+          <p>Evidencia de código</p>
           <a
             *ngFor="let evidence of project.evidence; trackBy: trackByEvidence"
             [href]="evidence.url"
@@ -122,8 +235,12 @@
   </section>
 
   <footer class="footer card">
-    <p class="kicker">Contacto</p>
-    <h3>{{ profile.name }}</h3>
+    <div>
+      <p class="kicker">Contacto</p>
+      <h3>{{ profile.name }}</h3>
+      <p class="footer-copy">Disponible para roles frontend y full stack con foco fuerte en experiencia de usuario y aplicaciones de negocio.</p>
+    </div>
+
     <div class="footer-links">
       <a [href]="'mailto:' + profile.email">{{ profile.email }}</a>
       <a [href]="profile.linkedin" target="_blank" rel="noreferrer">LinkedIn</a>
