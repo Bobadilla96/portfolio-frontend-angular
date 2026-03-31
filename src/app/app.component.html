@@ -42,9 +42,9 @@
 
     <aside class="hero-proof card">
       <p class="kicker">Resumen ejecutivo</p>
-      <h2>Frontend orientado a producto y operación</h2>
+      <h2>Frontend orientado a producto y operacion</h2>
       <p class="hero-proof-copy">
-        Portafolio con demos públicas, repositorios visibles y evidencias de código que muestran cómo resuelvo dashboards,
+        Portafolio con demos publicas, repositorios visibles y evidencias de codigo que muestran como resuelvo dashboards,
         paneles administrativos, reservas, e-commerce y plataformas educativas.
       </p>
 
@@ -65,9 +65,9 @@
 
       <div class="proof-list">
         <span>UI de negocio</span>
-        <span>Integración con APIs</span>
+        <span>Integracion con APIs</span>
         <span>Deploy y CI</span>
-        <span>Evidencia técnica enlazada</span>
+        <span>Evidencia tecnica enlazada</span>
       </div>
     </aside>
   </section>
@@ -78,18 +78,18 @@
       <strong>{{ projects.length }}</strong>
     </article>
     <article class="stat card">
-      <span class="label">Demos en producción</span>
+      <span class="label">Demos en produccion</span>
       <strong>{{ totalPublishedDemos }}</strong>
     </article>
     <article class="stat card">
-      <span class="label">Evidencias de código</span>
+      <span class="label">Evidencias de codigo</span>
       <strong>{{ totalEvidence }}</strong>
     </article>
   </section>
 
   <section class="content-grid">
     <article class="section-block card">
-      <p class="kicker">Stack técnico</p>
+      <p class="kicker">Stack tecnico</p>
       <h2>Capacidades frontend</h2>
 
       <div class="skill-groups">
@@ -104,7 +104,7 @@
 
     <article class="section-block card">
       <p class="kicker">Trayectoria</p>
-      <h2>Experiencia y formación</h2>
+      <h2>Experiencia y formacion</h2>
 
       <div class="timeline compact">
         <article class="timeline-item" *ngFor="let item of career">
@@ -121,17 +121,19 @@
 
   <section class="section-block featured-section" id="destacados">
     <div class="section-header">
-      <p class="kicker">Selección principal</p>
+      <p class="kicker">Seleccion principal</p>
       <h2>Proyectos destacados</h2>
       <p>
-        Los proyectos con mayor peso técnico y mejor capacidad para mostrar criterio de arquitectura, UI de producto e integración real.
+        Los proyectos con mayor peso tecnico y mejor capacidad para mostrar criterio de arquitectura, UI de producto e integracion real.
       </p>
     </div>
 
     <div class="featured-grid">
       <article class="featured-card card" *ngFor="let project of featuredProjects; trackBy: trackByProject">
         <div class="featured-media">
-          <img [src]="project.screenshotUrl" [alt]="project.title + ' screenshot'" loading="lazy" referrerpolicy="no-referrer" />
+          <div class="screenshot-frame featured-frame">
+            <img [src]="project.screenshotUrl" [alt]="project.title + ' screenshot'" loading="lazy" />
+          </div>
         </div>
 
         <div class="featured-body">
@@ -160,7 +162,7 @@
           </div>
 
           <div class="evidence-block">
-            <p>Evidencia de código</p>
+            <p>Evidencia de codigo</p>
             <a
               *ngFor="let evidence of project.evidence; trackBy: trackByEvidence"
               [href]="evidence.url"
@@ -178,8 +180,8 @@
   <section class="section-block library-section" id="proyectos">
     <div class="section-header">
       <p class="kicker">Biblioteca de proyectos</p>
-      <h2>Más proyectos publicados</h2>
-      <p>Filtrá por framework para revisar demos, repositorios y evidencia técnica según el stack que te interese.</p>
+      <h2>Mas proyectos publicados</h2>
+      <p>Filtra por framework para revisar demos, repositorios y evidencia tecnica segun el stack que te interese.</p>
     </div>
 
     <div class="framework-filters card">
@@ -196,7 +198,9 @@
     <div class="projects-grid">
       <article class="project-card" *ngFor="let project of libraryProjects; trackBy: trackByProject">
         <div class="project-media">
-          <img [src]="project.screenshotUrl" [alt]="project.title + ' screenshot'" loading="lazy" referrerpolicy="no-referrer" />
+          <div class="screenshot-frame">
+            <img [src]="project.screenshotUrl" [alt]="project.title + ' screenshot'" loading="lazy" />
+          </div>
         </div>
 
         <div class="project-head">
@@ -220,7 +224,7 @@
         </div>
 
         <div class="evidence-block">
-          <p>Evidencia de código</p>
+          <p>Evidencia de codigo</p>
           <a
             *ngFor="let evidence of project.evidence; trackBy: trackByEvidence"
             [href]="evidence.url"

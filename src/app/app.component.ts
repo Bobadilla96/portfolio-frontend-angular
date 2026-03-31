@@ -71,21 +71,21 @@ export class AppComponent {
     linkedin: 'https://www.linkedin.com/in/enriquejbrdyop007n',
     github: 'https://github.com/Bobadilla96',
     summary:
-      'Diseño y construyo productos frontend listos para producción: dashboards, CRUDs complejos, flujos autenticados, integraciones con APIs y experiencias enfocadas en claridad, rendimiento y mantenibilidad.'
+      'Diseno y construyo productos frontend listos para produccion: dashboards, CRUDs complejos, flujos autenticados, integraciones con APIs y experiencias enfocadas en claridad, rendimiento y mantenibilidad.'
   };
 
   readonly valuePillars: ValuePillar[] = [
     {
       title: 'Interfaces de negocio',
-      description: 'Pantallas que resuelven operaciones reales: pedidos, reservas, monitoreo, inventario y analítica.'
+      description: 'Pantallas que resuelven operaciones reales: pedidos, reservas, monitoreo, inventario y analitica.'
     },
     {
-      title: 'Código con estructura',
-      description: 'Arquitectura modular, componentes reutilizables, estados claros y evidencia técnica enlazada por proyecto.'
+      title: 'Codigo con estructura',
+      description: 'Arquitectura modular, componentes reutilizables, estados claros y evidencia tecnica enlazada por proyecto.'
     },
     {
-      title: 'Humildad técnica',
-      description: 'Trabajo con foco en iterar bien, corregir rápido y entregar soluciones útiles sin sobrecomplicar.'
+      title: 'Humildad tecnica',
+      description: 'Trabajo con foco en iterar bien, corregir rapido y entregar soluciones utiles sin sobrecomplicar.'
     }
   ];
 
@@ -99,7 +99,7 @@ export class AppComponent {
       items: ['RxJS', 'NgRx', 'Lazy Loading', 'Componentes standalone', 'Testing unitario', 'Guards RBAC', 'SSR/App Router']
     },
     {
-      title: 'Integración y Entrega',
+      title: 'Integracion y Entrega',
       items: ['REST APIs', 'Supabase', 'JWT mock', 'AWS Lambda', 'API Gateway', 'S3', 'CloudFormation', 'GitHub Actions', 'GitHub Pages', 'Vercel']
     }
   ];
@@ -108,11 +108,11 @@ export class AppComponent {
     {
       period: '2024 - 2026',
       role: 'Backend / Full Stack Developer',
-      company: 'Parque Tecnológico Itaipu',
+      company: 'Parque Tecnologico Itaipu',
       highlights: [
-        'Implementación de módulos web con integración de APIs para monitoreo técnico.',
-        'Trabajo colaborativo con equipos multidisciplinarios bajo metodología ágil.',
-        'Evolución de interfaces y soporte funcional en proyectos de software.'
+        'Implementacion y evolucion de modulos web con integracion de APIs para monitoreo tecnico.',
+        'Trabajo colaborativo con equipos multidisciplinarios bajo metodologia agil.',
+        'Participacion end-to-end fortaleciendo trazabilidad, calidad funcional y experiencia de usuario.'
       ]
     },
     {
@@ -121,18 +121,18 @@ export class AppComponent {
       company: 'Agrotec S.A.',
       highlights: [
         'Desarrollo de funcionalidades web para procesos de negocio.',
-        'Integración frontend con APIs REST y flujos de autenticación.',
+        'Integracion frontend con APIs REST y flujos de autenticacion.',
         'Entregas iterativas enfocadas en estabilidad y experiencia de usuario.'
       ]
     },
     {
       period: '2023',
-      role: 'Pasantía universitaria - Soporte Cloud / Developer',
+      role: 'Pasantia universitaria - Soporte Cloud / Developer',
       company: 'ARKHO',
       highlights: [
-        'Soporte e implementación sobre servicios AWS en entornos remotos.',
-        'Automatización y mejora operativa de infraestructura y accesos.',
-        'Colaboración con equipos distribuidos orientados a continuidad de servicio.'
+        'Soporte e implementacion sobre servicios AWS en entornos remotos.',
+        'Automatizacion y mejora operativa de infraestructura y accesos.',
+        'Colaboracion con equipos distribuidos orientados a continuidad de servicio.'
       ]
     },
     {
@@ -140,29 +140,29 @@ export class AppComponent {
       role: 'Full Stack Developer',
       company: 'Tips S.A. / Software Empresarial',
       highlights: [
-        'Participación en módulos de interfaz y mantenimiento evolutivo.',
-        'Integración cliente-servidor con datos relacionales.',
-        'Resolución de bugs y soporte de funcionalidades existentes.'
+        'Participacion en modulos web empresariales y mantenimiento evolutivo de interfaces.',
+        'Integracion cliente-servidor con datos relacionales.',
+        'Resolucion de bugs y soporte de funcionalidades existentes.'
       ]
     },
     {
-      period: 'Formación adicional',
-      role: 'AWS Certified Cloud Practitioner + práctica serverless',
+      period: 'Formacion adicional',
+      role: 'AWS Certified Cloud Practitioner + practica serverless',
       company: 'Ruta formativa orientada a cloud',
       highlights: [
-        'Certificación AWS Certified Cloud Practitioner.',
-        'Práctica aplicada con Lambda, API Gateway, CloudFormation, S3, DynamoDB y CloudWatch.',
-        'Base útil para dialogar con backend, serverless e infraestructura en proyectos frontend/full stack.'
+        'Certificacion AWS Certified Cloud Practitioner.',
+        'Practica aplicada con Lambda, API Gateway, CloudFormation, S3, DynamoDB y CloudWatch.',
+        'Base util para dialogar con backend, serverless e infraestructura en proyectos frontend y full stack.'
       ]
     },
     {
       period: '2017 - 2024',
-      role: 'Licenciatura en Análisis de Sistemas',
+      role: 'Licenciatura en Analisis de Sistemas',
       company: 'Universidad Nacional del Este',
       highlights: [
-        'Formación en ingeniería de software, bases de datos y análisis de sistemas.',
-        'Aplicación práctica en proyectos web y arquitectura de aplicaciones.',
-        'Enfoque continuo en mejora técnica y aprendizaje autodidacta.'
+        'Formacion en ingenieria de software, bases de datos y analisis de sistemas.',
+        'Aplicacion practica en proyectos web y arquitectura de aplicaciones.',
+        'Enfoque continuo en mejora tecnica y aprendizaje autodidacta.'
       ]
     }
   ];
@@ -177,8 +177,8 @@ export class AppComponent {
       subtitle: 'Plataforma de idiomas profesionales con IA, BBC y Supabase',
       framework: 'Next.js',
       description:
-        'Aplicación Next.js para aprendizaje de inglés profesional con rutas personalizadas, progreso sincronizado, biblioteca BBC, writing lab y módulo conversacional.',
-      impact: 'Demuestra un producto más completo: autenticación real, sincronización cloud, contenido didáctico y despliegue en Vercel.',
+        'Aplicacion Next.js para aprendizaje de ingles profesional con rutas personalizadas, progreso sincronizado, biblioteca BBC, writing lab y modulo conversacional.',
+      impact: 'Demuestra un producto mas completo: autenticacion real, sincronizacion cloud, contenido didactico y despliegue en Vercel.',
       tech: ['Next.js App Router', 'React 19', 'TypeScript', 'Tailwind CSS', 'Supabase', 'OpenRouter'],
       demoUrl: 'https://professional-language-coach.vercel.app',
       demoLabel: 'Demo en Vercel',
@@ -186,9 +186,9 @@ export class AppComponent {
       screenshotUrl: this.assetScreenshotUrl('professional-language-coach.png'),
       featured: true,
       highlights: [
-        'Autenticación real con Supabase y sincronización de progreso por usuario.',
-        'Módulos de speaking, writing, practice y conversación con fallback de voz.',
-        'Biblioteca BBC embebida para uso local/privado sin publicar materiales sensibles.'
+        'Autenticacion real con Supabase y sincronizacion de progreso por usuario.',
+        'Modulos de speaking, writing, practice y conversacion con fallback de voz.',
+        'Biblioteca BBC embebida para uso local y privado sin publicar materiales sensibles.'
       ],
       evidence: [
         {
@@ -207,11 +207,11 @@ export class AppComponent {
     },
     {
       id: 'gestion-de-pedidos',
-      title: 'Gestión de Pedidos',
+      title: 'Gestion de Pedidos',
       subtitle: 'Sistema operativo de pedidos con estado global',
       framework: 'Angular',
       description:
-        'Aplicación Angular para flujo completo de pedidos: login, dashboard, tabla avanzada, formularios dinámicos, store global y fake API controlada.',
+        'Aplicacion Angular para flujo completo de pedidos: login, dashboard, tabla avanzada, formularios dinamicos, store global y fake API controlada.',
       impact: 'Expone dominio de Angular para escenarios de negocio con estado, errores simulados y testing endurecido.',
       tech: ['Angular', 'NgRx', 'Tailwind', 'Jest', 'Fake API'],
       demoUrl: 'https://bobadilla96.github.io/gestion-de-pedidos/',
@@ -219,7 +219,7 @@ export class AppComponent {
       screenshotUrl: this.assetScreenshotUrl('gestion-de-pedidos.png'),
       featured: true,
       highlights: [
-        'Tabla con filtros, ordenamiento y paginación.',
+        'Tabla con filtros, ordenamiento y paginacion.',
         'Arquitectura store + effects para estado global.',
         'Interceptor de backend mock con errores simulados.'
       ],
@@ -244,16 +244,16 @@ export class AppComponent {
       subtitle: 'Monitoreo de dispositivos y alertas en tiempo real',
       framework: 'Angular',
       description:
-        'Dashboard industrial con simulación de sensores, alertas configurables y detalle de dispositivos con visualización de datos en vivo.',
-      impact: 'Representa bien escenarios B2B: métricas técnicas, umbrales y visualización orientada a operaciones.',
+        'Dashboard industrial con simulacion de sensores, alertas configurables y detalle de dispositivos con visualizacion de datos en vivo.',
+      impact: 'Representa bien escenarios B2B: metricas tecnicas, umbrales y visualizacion orientada a operaciones.',
       tech: ['Angular', 'RxJS', 'Tailwind', 'ngx-charts'],
       demoUrl: 'https://bobadilla96.github.io/monitor-iot-industrial/',
       repoUrl: 'https://github.com/Bobadilla96/monitor-iot-industrial',
       screenshotUrl: this.assetScreenshotUrl('monitor-iot-industrial.png'),
       featured: true,
       highlights: [
-        'Streaming simulado de métricas con RxJS.',
-        'Gestión de alertas con umbrales configurables.',
+        'Streaming simulado de metricas con RxJS.',
+        'Gestion de alertas con umbrales configurables.',
         'Detalle por dispositivo con export de datos.'
       ],
       evidence: [
@@ -277,17 +277,17 @@ export class AppComponent {
       subtitle: 'KPIs, presupuestos y reportes operativos',
       framework: 'Next.js',
       description:
-        'Aplicación Next.js para control financiero personal/pyme con dashboard de indicadores, gestión de transacciones, metas y reportes exportables.',
-      impact: 'Combina producto visual fuerte con tablas, gráficos y vistas de seguimiento financiero.',
+        'Aplicacion Next.js para control financiero personal y pyme con dashboard de indicadores, gestion de transacciones, metas y reportes exportables.',
+      impact: 'Combina producto visual fuerte con tablas, graficos y vistas de seguimiento financiero.',
       tech: ['Next.js App Router', 'React 19', 'TypeScript', 'Tailwind CSS', 'Recharts'],
       demoUrl: 'https://bobadilla96.github.io/dashboard-financiero/',
       repoUrl: 'https://github.com/Bobadilla96/dashboard-financiero',
       screenshotUrl: this.assetScreenshotUrl('dashboard-financiero.png'),
       featured: true,
       highlights: [
-        'Panel financiero con KPIs y gráficos por categoría.',
+        'Panel financiero con KPIs y graficos por categoria.',
         'Flujos de presupuesto, metas y seguimiento mensual.',
-        'Reportes con filtros por fecha y exportación CSV.'
+        'Reportes con filtros por fecha y exportacion CSV.'
       ],
       evidence: [
         {
@@ -310,16 +310,16 @@ export class AppComponent {
       subtitle: 'Help Desk estilo Kanban con SLA',
       framework: 'Angular',
       description:
-        'Mesa de ayuda con tickets, SLA por prioridad, board drag and drop y auditoría de acciones por rol.',
-      impact: 'Buen ejemplo de flujo operativo interno con estados, trazabilidad y UX de soporte técnico.',
+        'Mesa de ayuda con tickets, SLA por prioridad, board drag and drop y auditoria de acciones por rol.',
+      impact: 'Buen ejemplo de flujo operativo interno con estados, trazabilidad y UX de soporte tecnico.',
       tech: ['Angular', 'CDK DragDrop', 'SCSS', 'BehaviorSubject'],
       demoUrl: 'https://bobadilla96.github.io/tickets-soporte/',
       repoUrl: 'https://github.com/Bobadilla96/tickets-soporte',
       screenshotUrl: this.assetScreenshotUrl('tickets-soporte.png'),
       highlights: [
         'Board Kanban con transiciones de estado.',
-        'Timeline de auditoría por ticket y global.',
-        'Configuración SLA diferenciada por prioridad.'
+        'Timeline de auditoria por ticket y global.',
+        'Configuracion SLA diferenciada por prioridad.'
       ],
       evidence: [
         {
@@ -342,8 +342,8 @@ export class AppComponent {
       subtitle: 'CRUD de stock, movimientos y reportes',
       framework: 'Angular',
       description:
-        'Sistema de inventario con productos, movimientos de stock, alertas reactivas y exportación de reportes CSV/PDF.',
-      impact: 'Aterriza un caso clásico de negocio con formularios, reportes y decisiones de UX administrativas.',
+        'Sistema de inventario con productos, movimientos de stock, alertas reactivas y exportacion de reportes CSV y PDF.',
+      impact: 'Aterriza un caso clasico de negocio con formularios, reportes y decisiones de UX administrativas.',
       tech: ['Angular', 'NgRx', 'jsPDF', 'SCSS'],
       demoUrl: 'https://bobadilla96.github.io/inventario-control/',
       repoUrl: 'https://github.com/Bobadilla96/inventario-control',
@@ -351,7 +351,7 @@ export class AppComponent {
       highlights: [
         'Flujo completo de inventario con validaciones.',
         'Selectores NgRx para KPIs y alertas.',
-        'Exportes PDF/CSV orientados a reporte operativo.'
+        'Exportes PDF y CSV orientados a reporte operativo.'
       ],
       evidence: [
         {
@@ -374,8 +374,8 @@ export class AppComponent {
       subtitle: 'Panel administrativo con roles y permisos',
       framework: 'Angular',
       description:
-        'Panel administrativo con JWT mock, directiva estructural de permisos, guards por permiso y auditoría de acciones.',
-      impact: 'Expone criterio para seguridad UI, autorización y control granular de acceso en frontend.',
+        'Panel administrativo con JWT mock, directiva estructural de permisos, guards por permiso y auditoria de acciones.',
+      impact: 'Expone criterio para seguridad UI, autorizacion y control granular de acceso en frontend.',
       tech: ['Angular', 'RBAC', 'Directivas', 'Guards'],
       demoUrl: 'https://bobadilla96.github.io/admin-usuarios-rbac/',
       repoUrl: 'https://github.com/Bobadilla96/admin-usuarios-rbac',
@@ -383,7 +383,7 @@ export class AppComponent {
       highlights: [
         'Control granular de UI con *hasPermission.',
         'Guards de rutas por rol y permiso.',
-        'Gestión de permisos heredados e individuales.'
+        'Gestion de permisos heredados e individuales.'
       ],
       evidence: [
         {
@@ -406,14 +406,14 @@ export class AppComponent {
       subtitle: 'Plataforma e-learning con rutas por rol',
       framework: 'Next.js',
       description:
-        'Aplicación Next.js con catálogo de cursos, rutas dinámicas, dashboards por rol y tutor IA local para apoyar aprendizaje.',
-      impact: 'Muestra manejo de App Router, rutas dinámicas y experiencia de producto en una plataforma más amplia.',
+        'Aplicacion Next.js con catalogo de cursos, rutas dinamicas, dashboards por rol y tutor IA local para apoyar aprendizaje.',
+      impact: 'Muestra manejo de App Router, rutas dinamicas y experiencia de producto en una plataforma mas amplia.',
       tech: ['Next.js App Router', 'React 19', 'TypeScript', 'Tailwind CSS', 'GitHub Pages'],
       demoUrl: 'https://bobadilla96.github.io/cursos-online-lms/',
       repoUrl: 'https://github.com/Bobadilla96/cursos-online-lms',
       screenshotUrl: this.assetScreenshotUrl('cursos-online-lms.png'),
       highlights: [
-        'Catálogo y detalle de cursos con filtros y páginas estáticas.',
+        'Catalogo y detalle de cursos con filtros y paginas estaticas.',
         'Perfiles student, mentor y super admin con vistas separadas.',
         'Recomendaciones y chatbot tutor IA local sin servicios pagos.'
       ],
@@ -435,19 +435,19 @@ export class AppComponent {
     {
       id: 'marketplace-nextjs',
       title: 'Marketplace Next.js',
-      subtitle: 'Compra/venta con carrito y panel de vendedor',
+      subtitle: 'Compra y venta con carrito y panel de vendedor',
       framework: 'Next.js',
       description:
-        'Marketplace con Next.js App Router: catálogo, detalle de producto, favoritos persistentes, carrito con checkout demo, mensajería y panel de vendedor.',
-      impact: 'Buen caso de e-commerce funcional con múltiples flujos: compra, favoritos, seller dashboard y mensajes.',
+        'Marketplace con Next.js App Router: catalogo, detalle de producto, favoritos persistentes, carrito con checkout demo, mensajeria y panel de vendedor.',
+      impact: 'Buen caso de e-commerce funcional con multiples flujos: compra, favoritos, seller dashboard y mensajes.',
       tech: ['Next.js App Router', 'React 19', 'TypeScript', 'Tailwind CSS', 'GitHub Pages'],
       demoUrl: 'https://bobadilla96.github.io/07-marketplace/',
       repoUrl: 'https://github.com/Bobadilla96/07-marketplace',
       screenshotUrl: this.assetScreenshotUrl('marketplace-nextjs.png'),
       highlights: [
-        'Carrito con gestión de cantidades, resumen y flujo de pago demo.',
-        'Dashboard de vendedor con listados, mensajes y estadísticas.',
-        'Deploy estático en Pages con workflow de GitHub Actions.'
+        'Carrito con gestion de cantidades, resumen y flujo de pago demo.',
+        'Dashboard de vendedor con listados, mensajes y estadisticas.',
+        'Deploy estatico en Pages con workflow de GitHub Actions.'
       ],
       evidence: [
         {
@@ -467,19 +467,19 @@ export class AppComponent {
     {
       id: 'turnos-reservas',
       title: 'Turnos y Reservas',
-      subtitle: 'Agenda médica con flujo de reserva',
+      subtitle: 'Agenda medica con flujo de reserva',
       framework: 'Next.js',
       description:
-        'Plataforma de reservas con selección por servicio, profesional y horario, confirmación de turnos y panel administrativo con calendario.',
-      impact: 'Buena muestra de wizard complejo, disponibilidad y panel administrativo con lógica de agenda.',
+        'Plataforma de reservas con seleccion por servicio, profesional y horario, confirmacion de turnos y panel administrativo con calendario.',
+      impact: 'Buena muestra de wizard complejo, disponibilidad y panel administrativo con logica de agenda.',
       tech: ['Next.js App Router', 'React 19', 'TypeScript', 'Tailwind CSS', 'Store client-side'],
       demoUrl: 'https://bobadilla96.github.io/turnos-reservas/',
       repoUrl: 'https://github.com/Bobadilla96/turnos-reservas',
       screenshotUrl: this.assetScreenshotUrl('turnos-reservas.png'),
       highlights: [
         'Wizard de reserva en pasos con disponibilidad en tiempo real.',
-        'Panel de gestión con vistas de agenda y profesionales.',
-        'Flujo de autenticación por roles y rutas protegidas.'
+        'Panel de gestion con vistas de agenda y profesionales.',
+        'Flujo de autenticacion por roles y rutas protegidas.'
       ],
       evidence: [
         {
@@ -499,19 +499,19 @@ export class AppComponent {
     {
       id: 'kanban-board-colaborativo',
       title: 'Kanban Board Colaborativo',
-      subtitle: 'Gestión visual de tareas en React',
+      subtitle: 'Gestion visual de tareas en React',
       framework: 'React',
       description:
-        'Tablero Kanban estilo Trello con múltiples tableros, creación y edición de tarjetas, filtros, persistencia local y enfoque en UX profesional.',
-      impact: 'Presenta una UI más refinada con lógica de estado, formularios y persistencia sólida en React.',
+        'Tablero Kanban estilo Trello con multiples tableros, creacion y edicion de tarjetas, filtros, persistencia local y enfoque en UX profesional.',
+      impact: 'Presenta una UI mas refinada con logica de estado, formularios y persistencia solida en React.',
       tech: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS', 'Vitest'],
       demoUrl: 'https://bobadilla96.github.io/kanban-board-colaborativo/',
       repoUrl: 'https://github.com/Bobadilla96/kanban-board-colaborativo',
       screenshotUrl: this.assetScreenshotUrl('kanban-board-colaborativo.png'),
       highlights: [
         'CRUD completo de tableros, columnas y tarjetas.',
-        'Persistencia robusta con validaciones y recuperación de estado.',
-        'Componentes reutilizables para diálogos y layout de tablero.'
+        'Persistencia robusta con validaciones y recuperacion de estado.',
+        'Componentes reutilizables para dialogos y layout de tablero.'
       ],
       evidence: [
         {
@@ -534,7 +534,7 @@ export class AppComponent {
       subtitle: 'Pedidos de comida con checkout y tracking',
       framework: 'React',
       description:
-        'Aplicación tipo PedidosYa con catálogo de restaurantes, carrito persistente, checkout validado y timeline de seguimiento.',
+        'Aplicacion tipo PedidosYa con catalogo de restaurantes, carrito persistente, checkout validado y timeline de seguimiento.',
       impact: 'Demuestra una experiencia de consumo completa con reglas de negocio y estado persistente.',
       tech: ['React 19', 'TypeScript', 'Vite', 'Zustand Persist', 'Tailwind CSS', 'Vitest'],
       demoUrl: 'https://bobadilla96.github.io/delivery-app-react/',
@@ -542,7 +542,7 @@ export class AppComponent {
       screenshotUrl: this.assetScreenshotUrl('delivery-app-react.png'),
       highlights: [
         'Carrito persistente con regla de un solo restaurante por pedido.',
-        'Flujo completo: menú, carrito, checkout, tracking e historial.',
+        'Flujo completo: menu, carrito, checkout, tracking e historial.',
         'Deploy en GitHub Pages con fallback SPA y pipeline automatizado.'
       ],
       evidence: [
@@ -566,16 +566,16 @@ export class AppComponent {
       subtitle: 'KPIs ejecutivos, filtros y exportes',
       framework: 'React',
       description:
-        'Dashboard analítico para seguimiento de ingresos, usuarios y conversión, incluyendo comparación de periodos y exportes CSV/PDF.',
-      impact: 'Es uno de los proyectos visualmente más fuertes para vender capacidad de dashboard y toma de decisiones.',
+        'Dashboard analitico para seguimiento de ingresos, usuarios y conversion, incluyendo comparacion de periodos y exportes CSV y PDF.',
+      impact: 'Es uno de los proyectos visualmente mas fuertes para vender capacidad de dashboard y toma de decisiones.',
       tech: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS v4', 'Recharts', 'Zustand', 'Vitest'],
       demoUrl: 'https://bobadilla96.github.io/12-dashboard-analytics/',
       repoUrl: 'https://github.com/Bobadilla96/12-dashboard-analytics',
       screenshotUrl: this.assetScreenshotUrl('dashboard-analytics-react.png'),
       highlights: [
-        'Filtro por rango de fechas con presets y comparación contra periodo anterior.',
-        'Panel de KPIs, embudo de conversión, top páginas y objetivos de negocio.',
-        'Exportes operativos en CSV/PDF y soporte dark/light con persistencia local.'
+        'Filtro por rango de fechas con presets y comparacion contra periodo anterior.',
+        'Panel de KPIs, embudo de conversion, top paginas y objetivos de negocio.',
+        'Exportes operativos en CSV y PDF con soporte dark/light persistente.'
       ],
       evidence: [
         {
