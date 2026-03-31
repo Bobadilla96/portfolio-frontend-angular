@@ -1,7 +1,9 @@
 <div class="portfolio-shell">
   <header class="topbar">
     <div class="brand">
-      <span class="brand-mark">EB</span>
+      <div class="brand-mark brand-photo-shell">
+        <img class="brand-photo" [src]="profilePhotoUrl" [alt]="profile.name" />
+      </div>
       <div>
         <p class="kicker">Frontend Portfolio</p>
         <strong>{{ profile.name }}</strong>
@@ -91,6 +93,18 @@
     <article class="section-block card">
       <p class="kicker">Stack tecnico</p>
       <h2>Capacidades frontend</h2>
+      <p class="section-copy">
+        No trabajo solo con frameworks. Bajo cada demo hay criterio de arquitectura, manejo de estado, integracion con APIs,
+        seguridad UI y despliegue publico para que el resultado sea demostrable.
+      </p>
+
+      <div class="capability-metrics">
+        <article class="capability-metric" *ngFor="let metric of capabilityMetrics; trackBy: trackByMetric">
+          <span>{{ metric.label }}</span>
+          <strong>{{ metric.value }}</strong>
+          <p>{{ metric.detail }}</p>
+        </article>
+      </div>
 
       <div class="skill-groups">
         <article class="skill-group" *ngFor="let group of skillGroups">
@@ -99,6 +113,33 @@
             <span class="chip" *ngFor="let item of group.items; trackBy: trackByText">{{ item }}</span>
           </div>
         </article>
+      </div>
+
+      <div class="practice-grid">
+        <article class="practice-card" *ngFor="let block of practiceBlocks; trackBy: trackByPracticeBlock">
+          <h3>{{ block.title }}</h3>
+          <p>{{ block.description }}</p>
+          <ul>
+            <li *ngFor="let bullet of block.bullets; trackBy: trackByText">{{ bullet }}</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="delivery-block">
+        <div class="delivery-head">
+          <p class="kicker">Lo que normalmente entrego</p>
+          <h3>Frontend con criterio operativo</h3>
+          <p>
+            El objetivo no es solo una UI prolija. Busco que cada modulo soporte trabajo real, crecimiento del producto y lectura clara para otros equipos.
+          </p>
+        </div>
+
+        <div class="delivery-grid">
+          <article class="delivery-item" *ngFor="let item of deliveryItems; trackBy: trackByDeliveryItem">
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.description }}</p>
+          </article>
+        </div>
       </div>
     </article>
 

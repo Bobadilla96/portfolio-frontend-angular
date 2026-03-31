@@ -63,4 +63,12 @@ describe('AppComponent', () => {
     const awsEntry = app.career.find((item) => item.role.includes('AWS Certified Cloud Practitioner'));
     expect(awsEntry).toBeTruthy();
   });
+
+  it('should expose dense frontend capability content', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.capabilityMetrics.length).toBeGreaterThanOrEqual(4);
+    expect(app.practiceBlocks.length).toBeGreaterThanOrEqual(3);
+    expect(app.deliveryItems.length).toBeGreaterThanOrEqual(4);
+  });
 });

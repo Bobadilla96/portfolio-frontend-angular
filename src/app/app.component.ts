@@ -17,6 +17,23 @@ interface SkillGroup {
   items: string[];
 }
 
+interface CapabilityMetric {
+  label: string;
+  value: string;
+  detail: string;
+}
+
+interface PracticeBlock {
+  title: string;
+  description: string;
+  bullets: string[];
+}
+
+interface DeliveryItem {
+  title: string;
+  description: string;
+}
+
 interface CareerEntry {
   period: string;
   role: string;
@@ -73,6 +90,7 @@ export class AppComponent {
     summary:
       'Diseno y construyo productos frontend listos para produccion: dashboards, CRUDs complejos, flujos autenticados, integraciones con APIs y experiencias enfocadas en claridad, rendimiento y mantenibilidad.'
   };
+  readonly profilePhotoUrl = 'assets/profile/enrique-bobadilla.png';
 
   readonly valuePillars: ValuePillar[] = [
     {
@@ -91,16 +109,72 @@ export class AppComponent {
 
   readonly skillGroups: SkillGroup[] = [
     {
-      title: 'Frontend Core',
+      title: 'Frameworks y UI',
       items: ['Angular 17/19/20', 'Next.js 16', 'React 19', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'SCSS', 'Tailwind CSS']
     },
     {
-      title: 'Arquitectura y Calidad',
-      items: ['RxJS', 'NgRx', 'Lazy Loading', 'Componentes standalone', 'Testing unitario', 'Guards RBAC', 'SSR/App Router']
+      title: 'Estado y Arquitectura',
+      items: ['RxJS', 'NgRx', 'Signals', 'Lazy Loading', 'Componentes standalone', 'Feature-based structure', 'SSR/App Router']
     },
     {
-      title: 'Integracion y Entrega',
+      title: 'Calidad y Seguridad',
+      items: ['Testing unitario', 'Guards RBAC', 'Directivas por permiso', 'Estados vacios', 'Formularios validados', 'Error handling']
+    },
+    {
+      title: 'Integracion y Delivery',
       items: ['REST APIs', 'Supabase', 'JWT mock', 'AWS Lambda', 'API Gateway', 'S3', 'CloudFormation', 'GitHub Actions', 'GitHub Pages', 'Vercel']
+    }
+  ];
+
+  readonly practiceBlocks: PracticeBlock[] = [
+    {
+      title: 'Como estructuro un frontend',
+      description:
+        'Trabajo por features y separo layout, estado, acceso a datos y componentes reutilizables para que el producto pueda crecer sin desordenarse.',
+      bullets: [
+        'Arquitectura modular y escalable por dominio.',
+        'Contratos claros entre vistas, stores y servicios.',
+        'Routing protegido, layouts reutilizables y navegacion consistente.'
+      ]
+    },
+    {
+      title: 'Que cuido antes de entregar',
+      description:
+        'No cierro una pantalla solo porque se ve bien. Reviso los estados reales de uso para que la interfaz soporte operacion diaria.',
+      bullets: [
+        'Loading, error, vacio y success states visibles.',
+        'Responsive real para desktop y mobile.',
+        'Permisos, validaciones y accesibilidad base.'
+      ]
+    },
+    {
+      title: 'Con que integro y despliego',
+      description:
+        'Suelo moverme entre frontend puro y contexto full stack ligero, conectando autenticacion, APIs y despliegue sin perder foco en la UI.',
+      bullets: [
+        'Integracion con REST, Supabase y auth mock o real.',
+        'Deploy continuo con GitHub Pages, Vercel y pipelines simples.',
+        'Dialogo tecnico con backend, serverless e infraestructura AWS.'
+      ]
+    }
+  ];
+
+  readonly deliveryItems: DeliveryItem[] = [
+    {
+      title: 'Dashboards y paneles',
+      description: 'KPIs, tablas, filtros, graficos, vistas operativas y seguimiento de procesos.'
+    },
+    {
+      title: 'Flujos autenticados',
+      description: 'Login, roles, guards, permisos, sesiones y navegacion protegida por contexto.'
+    },
+    {
+      title: 'CRUDs de negocio',
+      description: 'Formularios complejos, validaciones, reportes, modales utiles y persistencia clara.'
+    },
+    {
+      title: 'Deploy y evidencia',
+      description: 'Demos publicas, repos visibles, screenshots reales y codigo enlazado por modulo.'
     }
   ];
 
@@ -598,6 +672,31 @@ export class AppComponent {
     return this.projects.filter((project) => project.featured);
   }
 
+  get capabilityMetrics(): CapabilityMetric[] {
+    return [
+      {
+        label: 'Proyectos publicados',
+        value: `${this.projects.length}+`,
+        detail: 'Demos, repositorios y evidencia tecnica visibles para revisar criterio de implementacion.'
+      },
+      {
+        label: 'Frameworks dominantes',
+        value: 'Angular / Next / React',
+        detail: 'Trabajo entre SPA administrativa, App Router y aplicaciones React con Vite.'
+      },
+      {
+        label: 'Tipo de producto',
+        value: 'B2B + producto interno',
+        detail: 'Inventario, reservas, marketplaces, analytics, soporte y plataformas educativas.'
+      },
+      {
+        label: 'Entrega real',
+        value: 'CI + deploy publico',
+        detail: 'GitHub Pages, Vercel y pipelines visibles en proyectos listos para mostrar.'
+      }
+    ];
+  }
+
   get libraryProjects(): ProjectShowcase[] {
     return this.projects.filter((project) => !project.featured && this.matchesFramework(project));
   }
@@ -640,6 +739,18 @@ export class AppComponent {
 
   trackByPillar(_index: number, pillar: ValuePillar): string {
     return pillar.title;
+  }
+
+  trackByMetric(_index: number, metric: CapabilityMetric): string {
+    return metric.label;
+  }
+
+  trackByPracticeBlock(_index: number, block: PracticeBlock): string {
+    return block.title;
+  }
+
+  trackByDeliveryItem(_index: number, item: DeliveryItem): string {
+    return item.title;
   }
 
   trackByEvidence(_index: number, evidence: CodeEvidence): string {
