@@ -100,7 +100,7 @@ export class AppComponent {
     },
     {
       title: 'Integración y Entrega',
-      items: ['REST APIs', 'Supabase', 'JWT mock', 'Git/GitHub', 'CI con GitHub Actions', 'GitHub Pages', 'Vercel']
+      items: ['REST APIs', 'Supabase', 'JWT mock', 'AWS Lambda', 'API Gateway', 'S3', 'CloudFormation', 'GitHub Actions', 'GitHub Pages', 'Vercel']
     }
   ];
 
@@ -127,12 +127,32 @@ export class AppComponent {
     },
     {
       period: '2023',
+      role: 'Pasantía universitaria - Soporte Cloud / Developer',
+      company: 'ARKHO',
+      highlights: [
+        'Soporte e implementación sobre servicios AWS en entornos remotos.',
+        'Automatización y mejora operativa de infraestructura y accesos.',
+        'Colaboración con equipos distribuidos orientados a continuidad de servicio.'
+      ]
+    },
+    {
+      period: '2023',
       role: 'Full Stack Developer',
       company: 'Tips S.A. / Software Empresarial',
       highlights: [
         'Participación en módulos de interfaz y mantenimiento evolutivo.',
         'Integración cliente-servidor con datos relacionales.',
         'Resolución de bugs y soporte de funcionalidades existentes.'
+      ]
+    },
+    {
+      period: 'Formación adicional',
+      role: 'AWS Certified Cloud Practitioner + práctica serverless',
+      company: 'Ruta formativa orientada a cloud',
+      highlights: [
+        'Certificación AWS Certified Cloud Practitioner.',
+        'Práctica aplicada con Lambda, API Gateway, CloudFormation, S3, DynamoDB y CloudWatch.',
+        'Base útil para dialogar con backend, serverless e infraestructura en proyectos frontend/full stack.'
       ]
     },
     {
@@ -163,7 +183,7 @@ export class AppComponent {
       demoUrl: 'https://professional-language-coach.vercel.app',
       demoLabel: 'Demo en Vercel',
       repoUrl: 'https://github.com/Bobadilla96/professional-language-coach',
-      screenshotUrl: this.buildScreenshotUrl('https://professional-language-coach.vercel.app'),
+      screenshotUrl: this.assetScreenshotUrl('professional-language-coach.png'),
       featured: true,
       highlights: [
         'Autenticación real con Supabase y sincronización de progreso por usuario.',
@@ -196,7 +216,7 @@ export class AppComponent {
       tech: ['Angular', 'NgRx', 'Tailwind', 'Jest', 'Fake API'],
       demoUrl: 'https://bobadilla96.github.io/gestion-de-pedidos/',
       repoUrl: 'https://github.com/Bobadilla96/gestion-de-pedidos',
-      screenshotUrl: this.buildScreenshotUrl('https://bobadilla96.github.io/gestion-de-pedidos/'),
+      screenshotUrl: this.assetScreenshotUrl('gestion-de-pedidos.png'),
       featured: true,
       highlights: [
         'Tabla con filtros, ordenamiento y paginación.',
@@ -229,7 +249,7 @@ export class AppComponent {
       tech: ['Angular', 'RxJS', 'Tailwind', 'ngx-charts'],
       demoUrl: 'https://bobadilla96.github.io/monitor-iot-industrial/',
       repoUrl: 'https://github.com/Bobadilla96/monitor-iot-industrial',
-      screenshotUrl: this.buildScreenshotUrl('https://bobadilla96.github.io/monitor-iot-industrial/'),
+      screenshotUrl: this.assetScreenshotUrl('monitor-iot-industrial.png'),
       featured: true,
       highlights: [
         'Streaming simulado de métricas con RxJS.',
@@ -262,7 +282,7 @@ export class AppComponent {
       tech: ['Next.js App Router', 'React 19', 'TypeScript', 'Tailwind CSS', 'Recharts'],
       demoUrl: 'https://bobadilla96.github.io/dashboard-financiero/',
       repoUrl: 'https://github.com/Bobadilla96/dashboard-financiero',
-      screenshotUrl: this.buildScreenshotUrl('https://bobadilla96.github.io/dashboard-financiero/'),
+      screenshotUrl: this.assetScreenshotUrl('dashboard-financiero.png'),
       featured: true,
       highlights: [
         'Panel financiero con KPIs y gráficos por categoría.',
@@ -295,7 +315,7 @@ export class AppComponent {
       tech: ['Angular', 'CDK DragDrop', 'SCSS', 'BehaviorSubject'],
       demoUrl: 'https://bobadilla96.github.io/tickets-soporte/',
       repoUrl: 'https://github.com/Bobadilla96/tickets-soporte',
-      screenshotUrl: this.buildScreenshotUrl('https://bobadilla96.github.io/tickets-soporte/'),
+      screenshotUrl: this.assetScreenshotUrl('tickets-soporte.png'),
       highlights: [
         'Board Kanban con transiciones de estado.',
         'Timeline de auditoría por ticket y global.',
@@ -327,7 +347,7 @@ export class AppComponent {
       tech: ['Angular', 'NgRx', 'jsPDF', 'SCSS'],
       demoUrl: 'https://bobadilla96.github.io/inventario-control/',
       repoUrl: 'https://github.com/Bobadilla96/inventario-control',
-      screenshotUrl: this.buildScreenshotUrl('https://bobadilla96.github.io/inventario-control/'),
+      screenshotUrl: this.assetScreenshotUrl('inventario-control.png'),
       highlights: [
         'Flujo completo de inventario con validaciones.',
         'Selectores NgRx para KPIs y alertas.',
@@ -359,7 +379,7 @@ export class AppComponent {
       tech: ['Angular', 'RBAC', 'Directivas', 'Guards'],
       demoUrl: 'https://bobadilla96.github.io/admin-usuarios-rbac/',
       repoUrl: 'https://github.com/Bobadilla96/admin-usuarios-rbac',
-      screenshotUrl: this.buildScreenshotUrl('https://bobadilla96.github.io/admin-usuarios-rbac/'),
+      screenshotUrl: this.assetScreenshotUrl('admin-usuarios-rbac.png'),
       highlights: [
         'Control granular de UI con *hasPermission.',
         'Guards de rutas por rol y permiso.',
@@ -391,7 +411,7 @@ export class AppComponent {
       tech: ['Next.js App Router', 'React 19', 'TypeScript', 'Tailwind CSS', 'GitHub Pages'],
       demoUrl: 'https://bobadilla96.github.io/cursos-online-lms/',
       repoUrl: 'https://github.com/Bobadilla96/cursos-online-lms',
-      screenshotUrl: this.buildScreenshotUrl('https://bobadilla96.github.io/cursos-online-lms/'),
+      screenshotUrl: this.assetScreenshotUrl('cursos-online-lms.png'),
       highlights: [
         'Catálogo y detalle de cursos con filtros y páginas estáticas.',
         'Perfiles student, mentor y super admin con vistas separadas.',
@@ -423,7 +443,7 @@ export class AppComponent {
       tech: ['Next.js App Router', 'React 19', 'TypeScript', 'Tailwind CSS', 'GitHub Pages'],
       demoUrl: 'https://bobadilla96.github.io/07-marketplace/',
       repoUrl: 'https://github.com/Bobadilla96/07-marketplace',
-      screenshotUrl: this.buildScreenshotUrl('https://bobadilla96.github.io/07-marketplace/'),
+      screenshotUrl: this.assetScreenshotUrl('marketplace-nextjs.png'),
       highlights: [
         'Carrito con gestión de cantidades, resumen y flujo de pago demo.',
         'Dashboard de vendedor con listados, mensajes y estadísticas.',
@@ -455,7 +475,7 @@ export class AppComponent {
       tech: ['Next.js App Router', 'React 19', 'TypeScript', 'Tailwind CSS', 'Store client-side'],
       demoUrl: 'https://bobadilla96.github.io/turnos-reservas/',
       repoUrl: 'https://github.com/Bobadilla96/turnos-reservas',
-      screenshotUrl: this.buildScreenshotUrl('https://bobadilla96.github.io/turnos-reservas/'),
+      screenshotUrl: this.assetScreenshotUrl('turnos-reservas.png'),
       highlights: [
         'Wizard de reserva en pasos con disponibilidad en tiempo real.',
         'Panel de gestión con vistas de agenda y profesionales.',
@@ -487,7 +507,7 @@ export class AppComponent {
       tech: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS', 'Vitest'],
       demoUrl: 'https://bobadilla96.github.io/kanban-board-colaborativo/',
       repoUrl: 'https://github.com/Bobadilla96/kanban-board-colaborativo',
-      screenshotUrl: this.buildScreenshotUrl('https://bobadilla96.github.io/kanban-board-colaborativo/'),
+      screenshotUrl: this.assetScreenshotUrl('kanban-board-colaborativo.png'),
       highlights: [
         'CRUD completo de tableros, columnas y tarjetas.',
         'Persistencia robusta con validaciones y recuperación de estado.',
@@ -519,7 +539,7 @@ export class AppComponent {
       tech: ['React 19', 'TypeScript', 'Vite', 'Zustand Persist', 'Tailwind CSS', 'Vitest'],
       demoUrl: 'https://bobadilla96.github.io/delivery-app-react/',
       repoUrl: 'https://github.com/Bobadilla96/delivery-app-react',
-      screenshotUrl: this.buildScreenshotUrl('https://bobadilla96.github.io/delivery-app-react/'),
+      screenshotUrl: this.assetScreenshotUrl('delivery-app-react.png'),
       highlights: [
         'Carrito persistente con regla de un solo restaurante por pedido.',
         'Flujo completo: menú, carrito, checkout, tracking e historial.',
@@ -551,7 +571,7 @@ export class AppComponent {
       tech: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS v4', 'Recharts', 'Zustand', 'Vitest'],
       demoUrl: 'https://bobadilla96.github.io/12-dashboard-analytics/',
       repoUrl: 'https://github.com/Bobadilla96/12-dashboard-analytics',
-      screenshotUrl: this.buildScreenshotUrl('https://bobadilla96.github.io/12-dashboard-analytics/'),
+      screenshotUrl: this.assetScreenshotUrl('dashboard-analytics-react.png'),
       highlights: [
         'Filtro por rango de fechas con presets y comparación contra periodo anterior.',
         'Panel de KPIs, embudo de conversión, top páginas y objetivos de negocio.',
@@ -630,7 +650,7 @@ export class AppComponent {
     return this.selectedFramework === 'Todos' || project.framework === this.selectedFramework;
   }
 
-  private buildScreenshotUrl(url: string): string {
-    return `https://image.thum.io/get/width/1440/noanimate/${url}`;
+  private assetScreenshotUrl(fileName: string): string {
+    return `assets/screenshots/${fileName}`;
   }
 }

@@ -1,12 +1,12 @@
 # Portfolio Frontend - Enrique Bobadilla
 
-Portfolio frontend en Angular que consolida proyectos reales publicados, trayectoria profesional y evidencia de código enlazada a repositorios y demos.
+Portfolio frontend en Angular que consolida proyectos reales publicados, trayectoria profesional y evidencia de codigo enlazada a repositorios y demos.
 
 ## Que incluye
 
 - Hero con propuesta de valor, CTA y resumen ejecutivo.
-- Sección de stack técnico y trayectoria profesional.
-- Proyectos destacados con screenshots remotos, impacto y evidencia de código.
+- Seccion de stack tecnico y trayectoria profesional.
+- Proyectos destacados con capturas reales locales, impacto y evidencia de codigo.
 - Biblioteca de proyectos filtrable por framework:
   - Angular
   - Next.js
@@ -32,8 +32,10 @@ Portfolio frontend en Angular que consolida proyectos reales publicados, trayect
 ## Fuentes de informacion usadas
 
 - CVs en `C:\Users\enrib\Documents\pgxDev\CVs`
+- PDF usado para sumar experiencia cloud y formacion AWS:
+  - `C:\Users\enrib\Documents\pgxDev\CVs\frontend\react-nextjs-hibrido-py\Enrique_Bobadilla_CV_Frontend_React_Next_Hibrido.pdf`
 - Repositorios publicos de GitHub `Bobadilla96`
-- Demos publicadas en GitHub Pages
+- Demos publicadas en GitHub Pages y Vercel
 
 ## Scripts
 

@@ -54,6 +54,13 @@ describe('AppComponent', () => {
   it('should build screenshot urls for all projects', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.projects.every((project) => project.screenshotUrl.includes('image.thum.io'))).toBeTrue();
+    expect(app.projects.every((project) => project.screenshotUrl.startsWith('assets/screenshots/'))).toBeTrue();
+  });
+
+  it('should include AWS training in the career timeline', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const awsEntry = app.career.find((item) => item.role.includes('AWS Certified Cloud Practitioner'));
+    expect(awsEntry).toBeTruthy();
   });
 });
